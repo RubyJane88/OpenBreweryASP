@@ -1,13 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 
+
 namespace OpenBreweryASP.Controllers
 {
-    public class SeedController : Controller
+    public class SeedController : ControllerBase
     {
-        // GET
-        public IActionResult Index()
-        {
-            return View();
-        }
+      
     }
 }

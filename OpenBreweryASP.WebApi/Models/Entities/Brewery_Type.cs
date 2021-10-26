@@ -1,7 +1,19 @@
+using System;
+
 namespace OpenBreweryASP.Models.Entities
 {
-    public class Brewery_Type
+    public enum BreweryType
     {
-        
+      Micro, 
+      Nano,
+      Regional,
+      Brewpub,
+      Large,
+      Planning,
+      Bar,
+      Contract,
+      Proprietor,
+      Closed
+      
     }
 }

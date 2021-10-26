@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenBreweryASP", "OpenBreweryASP\OpenBreweryASP.csproj", "{E0BBD06D-953C-4AC5-9C55-822498ECAD65}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenBreweryASP.WebApi", "OpenBreweryASP.WebApi\OpenBreweryASP.WebApi.csproj", "{E0BBD06D-953C-4AC5-9C55-822498ECAD65}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

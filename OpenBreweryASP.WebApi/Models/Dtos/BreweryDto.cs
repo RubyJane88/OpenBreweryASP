@@ -5,7 +5,7 @@ using OpenBreweryASP.Models.Entities;
 
 namespace OpenBreweryASP.Models.Dtos
 {
-    public sealed class Brewery
+    public sealed class BreweryDto
     {
         public int Id { get; set; }
         

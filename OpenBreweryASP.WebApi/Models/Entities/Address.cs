@@ -1,7 +1,7 @@
 namespace OpenBreweryASP.Models.Entities
 {
-    public class Address
+    public sealed class Address
     {
-        
+        public int Id { get; set; }
     }
 }
