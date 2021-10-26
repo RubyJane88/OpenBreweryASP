@@ -1,0 +1,16 @@
+10/25/2021 23:00:42 +02:00 Application Starting
+10/25/2021 23:00:43 +02:00 Now listening on: "https://localhost:5001"
+10/25/2021 23:00:43 +02:00 Now listening on: "http://localhost:5000"
+10/25/2021 23:00:43 +02:00 Application started. Press Ctrl+C to shut down.
+10/25/2021 23:00:43 +02:00 Hosting environment: "Development"
+10/25/2021 23:00:43 +02:00 Content root path: "/Users/macbook/Desktop/ASP .Net Core/OpenBreweryASP/OpenBreweryASP.WebApi"
+10/25/2021 23:00:44 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html - -
+10/25/2021 23:00:44 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 186.1153ms
+10/25/2021 23:00:44 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - -
+10/25/2021 23:00:44 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui-bundle.js - -
+10/25/2021 23:00:44 +02:00 Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+10/25/2021 23:00:44 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 57.8156ms
+10/25/2021 23:00:44 +02:00 Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+10/25/2021 23:00:44 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 57.1849ms
+10/25/2021 23:00:45 +02:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+10/25/2021 23:00:45 +02:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 133.1229ms
