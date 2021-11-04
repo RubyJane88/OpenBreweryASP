@@ -7,27 +7,27 @@ namespace OpenBreweryASP.Models.Dtos
 {
     public sealed class BreweryDto
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         
         [Required(ErrorMessage = "Name is required")]
-        public string Name { get; set; }
+        public string Name { get; init; }
 
-        public BreweryType BreweryType { get; set; }
+        public string BreweryType { get; set; }
         
-        public string Street { get; set; }
+        public string Street { get; init; }
         
         public ICollection<Address> Addresses { get; set; }
         public string City { get; set; }
         public string State { get; set; }
-        public string County_province { get; set; }
-        public string Postal_code { get; set; }
+        public string CountyProvince { get; set; }
+        public string PostalCode { get; set; }
 
         public string Country { get; set; }
-        public string Longitude { get; set; }
-        public string Latitude { get; set; }
+        public string? Longitude { get; set; }
+        public string? Latitude { get; set; }
         public string Phone { get; set; }
-        public string Website_url { get; set; }
-        public DateTime Updated_at { get; set; } = DateTime.Now.ToLocalTime();
-        public DateTime Created_at { get; set; } = DateTime.Now.ToLocalTime();
+        public string WebsiteUrl { get; set; }
+        public DateTime UpdatedAt { get; set; } = DateTime.Now.ToLocalTime();
+        public DateTime CreatedAt { get; set; } = DateTime.Now.ToLocalTime();
     }
 }

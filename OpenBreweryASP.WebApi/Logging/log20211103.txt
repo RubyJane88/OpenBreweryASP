@@ -1,0 +1,7 @@
+11/03/2021 22:06:20 +01:00 Application Starting
+11/03/2021 22:06:21 +01:00 Application is shutting down...
+11/03/2021 22:06:21 +01:00 Now listening on: "https://localhost:5001"
+11/03/2021 22:06:21 +01:00 Now listening on: "http://localhost:5000"
+11/03/2021 22:06:21 +01:00 Application started. Press Ctrl+C to shut down.
+11/03/2021 22:06:21 +01:00 Hosting environment: "Development"
+11/03/2021 22:06:21 +01:00 Content root path: "/Users/macbook/Desktop/ASP .Net Core/OpenBreweryASP/OpenBreweryASP.WebApi"

@@ -62,21 +62,122 @@ namespace OpenBreweryASP.Repositories
             }
         }
 
+
+        public async Task<BreweryDto> GetBreweryByStateAsync(string state)
+        {
+            try
+            {
+                var exists = await ExistsByStateAsync(state);
+                if (exists)
+                {
+                    var brewery = await _context.Breweries.FirstOrDefaultAsync(b => b.State == state);
+                    var breweryDto = _mapper.Map<BreweryDto>(brewery);
+                    return breweryDto;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw new Exception("Error getting brewery in that state"); 
+            }
+        }
+
+        public async Task<BreweryDto> GetBreweryByTypeAsync(string type)
+        {
+            try
+            {
+                var exists = await ExistsByTypeAsync(type);
+                if (exists)
+                {
+                    var brewery  = await _context.Breweries.FirstOrDefaultAsync(b => b.BreweryType == type);
+                    var breweryDto = _mapper.Map<BreweryDto>(brewery);
+                    return breweryDto;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw new Exception("Error getting brewery type");
+            }
+        }
+
         public async Task<BreweryDto> CreateAsync(Brewery brewery)
         {
-            throw new System.NotImplementedException();
+            try
+            {
+                _context.Breweries.Add(brewery);
+                
+                await _context.SaveChangesAsync();
+
+                var breweryDto = _mapper.Map<BreweryDto>(brewery);
+                return breweryDto;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw new Exception("Error creating new brewery");
+            }
         }
 
-        public async Task DeleteAsync(int id)
+        //refactored it to return bool to check if id is not null
+        public async Task<bool> DeleteAsync(Guid id)
         {
-            throw new System.NotImplementedException();
+            try
+            {
+                var exists = await ExistsByIdAsync(id);
+                if (exists)
+                {
+                    _context.Remove(await _context.Breweries.FindAsync(id));
+                    await _context.SaveChangesAsync();
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error deleting brewery");
+            }
         }
-
+        
+        
         public async Task<BreweryDto> UpdateAsync(Brewery brewery)
         {
-            throw new System.NotImplementedException();
+            try
+            {
+                var exists = await ExistsByIdAsync(brewery.Id);
+                if (!exists) throw new Exception("Not found");
+
+                _context.Update(brewery);
+                await _context.SaveChangesAsync();
+                var breweryDto = _mapper.Map<BreweryDto>(brewery);
+                return breweryDto;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw new Exception("Error updating the brewery");
+            }
         }
 
-        public async Task<bool> ExistsByCityAsync(string city) => await _context.Breweries.AnyAsync(t => t.City == city);
+        public async Task<bool> ExistsByCityAsync(string city) => await _context.Breweries.AnyAsync(b => b.City == city);
+        
+        public async Task<bool> ExistsByStateAsync(string state) => await _context.Breweries.AnyAsync(b => b.State == state);
+
+        public async Task<bool> ExistsByTypeAsync(string type) => await _context.Breweries
+            .AnyAsync(b => b.BreweryType == type);
+        
+
+        public async Task<bool> ExistsByIdAsync(Guid id) => await _context.Breweries.AnyAsync(b => b.Id == id);
     }
 }
