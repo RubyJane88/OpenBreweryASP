@@ -1,0 +1,56 @@
+11/04/2021 10:18:05 +01:00 Application Starting
+11/04/2021 10:18:07 +01:00 Now listening on: "https://localhost:5001"
+11/04/2021 10:18:07 +01:00 Now listening on: "http://localhost:5000"
+11/04/2021 10:18:07 +01:00 Application started. Press Ctrl+C to shut down.
+11/04/2021 10:18:07 +01:00 Hosting environment: "Development"
+11/04/2021 10:18:07 +01:00 Content root path: "/Users/macbook/Desktop/ASP .Net Core/OpenBreweryASP/OpenBreweryASP.WebApi"
+11/04/2021 10:18:07 +01:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html - -
+11/04/2021 10:18:08 +01:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 200.0626ms
+11/04/2021 10:18:08 +01:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+11/04/2021 10:18:09 +01:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 191.7172ms
+11/04/2021 10:18:22 +01:00 Request starting HTTP/1.1 GET https://localhost:5001/Breweries?by_city=Lagos - -
+11/04/2021 10:18:22 +01:00 Executing endpoint '"OpenBreweryASP.Controllers.BreweriesController.GetBreweries (OpenBreweryASP.WebApi)"'
+11/04/2021 10:18:22 +01:00 Route matched with "{action = \"GetBreweries\", controller = \"Breweries\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBreweries(System.String)" on controller "OpenBreweryASP.Controllers.BreweriesController" ("OpenBreweryASP.WebApi").
+11/04/2021 10:18:24 +01:00 Entity Framework Core "5.0.10" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+11/04/2021 10:18:24 +01:00 Executed DbCommand ("64"ms) [Parameters=["@__city_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Brewery] AS [b]
+        WHERE [b].[City] = @__city_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+11/04/2021 10:18:25 +01:00 Executing "ObjectResult", writing value of type '"Microsoft.AspNetCore.Mvc.ProblemDetails"'.
+11/04/2021 10:18:25 +01:00 Executed action "OpenBreweryASP.Controllers.BreweriesController.GetBreweries (OpenBreweryASP.WebApi)" in 2170.9112ms
+11/04/2021 10:18:25 +01:00 Executed endpoint '"OpenBreweryASP.Controllers.BreweriesController.GetBreweries (OpenBreweryASP.WebApi)"'
+11/04/2021 10:18:25 +01:00 Request finished HTTP/1.1 GET https://localhost:5001/Breweries?by_city=Lagos - - - 404 - application/problem+json;+charset=utf-8 2278.3210ms
+11/04/2021 10:18:32 +01:00 Request starting HTTP/1.1 GET https://localhost:5001/Breweries?by_city=Alameda - -
+11/04/2021 10:18:32 +01:00 Executing endpoint '"OpenBreweryASP.Controllers.BreweriesController.GetBreweries (OpenBreweryASP.WebApi)"'
+11/04/2021 10:18:32 +01:00 Route matched with "{action = \"GetBreweries\", controller = \"Breweries\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBreweries(System.String)" on controller "OpenBreweryASP.Controllers.BreweriesController" ("OpenBreweryASP.WebApi").
+11/04/2021 10:18:32 +01:00 Entity Framework Core "5.0.10" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+11/04/2021 10:18:32 +01:00 Executed DbCommand ("7"ms) [Parameters=["@__city_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Brewery] AS [b]
+        WHERE [b].[City] = @__city_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+11/04/2021 10:18:32 +01:00 Executed DbCommand ("9"ms) [Parameters=["@__city_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [b].[Id], [b].[BreweryType], [b].[City], [b].[Country], [b].[CountyProvince], [b].[CreatedAt], [b].[Latitude], [b].[Longitude], [b].[Name], [b].[Phone], [b].[PostalCode], [b].[State], [b].[Street], [b].[UpdatedAt], [b].[WebsiteUrl]
+FROM [Brewery] AS [b]
+WHERE [b].[City] = @__city_0"
+11/04/2021 10:18:32 +01:00 Executing "OkObjectResult", writing value of type '"OpenBreweryASP.Models.Dtos.BreweryDto"'.
+11/04/2021 10:18:32 +01:00 Executed action "OpenBreweryASP.Controllers.BreweriesController.GetBreweries (OpenBreweryASP.WebApi)" in 157.837ms
+11/04/2021 10:18:32 +01:00 Executed endpoint '"OpenBreweryASP.Controllers.BreweriesController.GetBreweries (OpenBreweryASP.WebApi)"'
+11/04/2021 10:18:32 +01:00 Request finished HTTP/1.1 GET https://localhost:5001/Breweries?by_city=Alameda - - - 200 - application/json;+charset=utf-8 161.2255ms
+11/04/2021 10:20:53 +01:00 Application Starting
+11/04/2021 10:20:54 +01:00 Now listening on: "https://localhost:5001"
+11/04/2021 10:20:54 +01:00 Now listening on: "http://localhost:5000"
+11/04/2021 10:20:54 +01:00 Application started. Press Ctrl+C to shut down.
+11/04/2021 10:20:54 +01:00 Hosting environment: "Development"
+11/04/2021 10:20:54 +01:00 Content root path: "/Users/macbook/Desktop/ASP .Net Core/OpenBreweryASP/OpenBreweryASP.WebApi"
+11/04/2021 10:20:55 +01:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html - -
+11/04/2021 10:20:55 +01:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 258.2799ms
+11/04/2021 10:20:56 +01:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+11/04/2021 10:20:56 +01:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 138.7484ms

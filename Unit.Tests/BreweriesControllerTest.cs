@@ -26,23 +26,39 @@ namespace Unit.Tests
         }
 
         [Theory]
-        [InlineData("Lagos", "Alameda")]
-        public async Task GetBreweriesTest(string invalidCity, string validCity)
+        [InlineData("Lagos")]
+        public async Task GetBreweriesTestInvalidCity(string invalidCity)
         {
             //arrange 
-            var mockBreweryDtos = MockData.GetAllBreweries();
-            _mockRepo.Setup(repository => repository.GetAllAsync()).Returns(Task.FromResult(mockBreweryDtos));
+            _mockRepo.Setup(repository => repository.ExistsByCityAsync(invalidCity)).ReturnsAsync(null);
 
             //act
-            var result = await _controller.GetBreweries(invalidCity);
-            var response = (NotFoundResult)result;
+            var resultOfInvalidCity = await _controller.GetBreweries(invalidCity);
+            var ofInvalidCity = (NotFoundResult)resultOfInvalidCity;
 
             //assert
-            Assert.Equal(404, response.StatusCode);
+            Assert.Equal(404, ofInvalidCity.StatusCode);
+            Assert.IsAssignableFrom<IActionResult>(resultOfInvalidCity);
+            Assert.IsType<NotFoundResult>(resultOfInvalidCity);
 
             // Fluent assertion version
-            result.Should().BeOfType<NotFoundResult>();
-            
+            resultOfInvalidCity.Should().BeOfType<NotFoundResult>();
+        }
+        
+        [Theory]
+        [InlineData("")]
+        public async Task GetBreweriesTestEmpty(string empty)
+        {
+            //arrange 
+            var breweryDtos = MockData.GetAllBreweries();
+            _mockRepo.Setup(repository =>  repository.GetAllAsync()).Returns(Task.FromResult(breweryDtos));
+
+            //act
+            var resultOfInvalidCity = await _controller.GetBreweries(empty);
+            var validCity = (OkObjectResult)resultOfInvalidCity;
+
+            //assert
+            Assert.Equal(200, validCity.StatusCode);
         }
 
     [Theory]
@@ -58,10 +74,15 @@ namespace Unit.Tests
         
         //assert
         if (result is OkResult response) Assert.Equal(200, response.StatusCode);
+        Assert.IsAssignableFrom<IActionResult>(result);
+        Assert.NotNull(result);
+        
+        
+  
         
         // Fluent assertion version
         result.Should().NotBe(null);
-        result.Should().BeOfType<OkResult>();
+     
         
     }
 
@@ -75,12 +96,23 @@ namespace Unit.Tests
         
         //act
         var result = await _controller.GetBreweryByType(validTypeBrewery.First().BreweryType);
-        
+
         //assert
         if (result is OkResult response) Assert.Equal(200, response.StatusCode);
+        Assert.IsAssignableFrom<IActionResult>(result);
+        Assert.NotNull(result);
         
-        
+        // Fluent assertion version
+        result.Should().NotBe(null);
+        result.Should().BeAssignableTo<IActionResult>();
+
+
+
+
     }
+    
+    
+    
     
 
     }

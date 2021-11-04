@@ -22,7 +22,7 @@ namespace OpenBreweryASP.Controllers
         [HttpGet]
         public async Task<IActionResult> GetBreweries([FromQuery(Name = "by_city")] string city)
         {
-            if ( city == null)
+            if (string.IsNullOrEmpty(city))
             {
                 var brewery = await _repo.GetAllAsync();
                 var response = Ok(brewery);
