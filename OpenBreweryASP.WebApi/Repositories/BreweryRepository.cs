@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
@@ -37,23 +38,24 @@ namespace OpenBreweryASP.Repositories
             }
         }
 
-        public async Task<BreweryDto> GetBreweryByCityAsync(string city)
+        public async Task<IEnumerable<BreweryDto>> GetBreweryByCityAsync(string city)
         {
             try
             {
 
-                var exists = await ExistsByCityAsync(city);
-                if (exists)
+                var existsByCityAsync = await ExistsByCityAsync(city);
+                if (existsByCityAsync)
                 {
-                    
-                    var brewery = await _context.Breweries.FirstOrDefaultAsync(b => b.City == city);
-                    var breweryDto = _mapper.Map<BreweryDto>(brewery);
+                    var breweries = await _context.Breweries.Where(b => b.City == city).ToListAsync();
+                    var breweryDto = _mapper.Map<IEnumerable<BreweryDto>>(breweries);
+
                     return breweryDto;
                 }
                 else
                 {
                     return null;
                 }
+                
             }
             catch (Exception e)
             {
@@ -63,16 +65,18 @@ namespace OpenBreweryASP.Repositories
         }
 
 
-        public async Task<BreweryDto> GetBreweryByStateAsync(string state)
+        public async Task <IEnumerable<BreweryDto>> GetBreweriesByStateAsync(string state)
         {
             try
             {
+
                 var exists = await ExistsByStateAsync(state);
                 if (exists)
                 {
-                    var brewery = await _context.Breweries.FirstOrDefaultAsync(b => b.State == state);
-                    var breweryDto = _mapper.Map<BreweryDto>(brewery);
-                    return breweryDto;
+                    var breweriesByState = await _context.Breweries.Where(b => b.State == state).ToListAsync();
+                    var result = _mapper.Map <IEnumerable<BreweryDto>>(breweriesByState);
+                    return result;
+
                 }
                 else
                 {

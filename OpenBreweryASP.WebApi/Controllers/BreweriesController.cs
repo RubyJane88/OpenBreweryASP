@@ -20,7 +20,7 @@ namespace OpenBreweryASP.Controllers
         
         //GET: breweries/
         [HttpGet]
-        public async Task<IActionResult> GetBreweries([FromQuery(Name = "by_city")] string city)
+        public async Task<IActionResult> AllBreweries([FromQuery(Name = "by_city")] string city)
         {
             if (string.IsNullOrEmpty(city))
             {
@@ -40,9 +40,9 @@ namespace OpenBreweryASP.Controllers
 
         //GET: by_state
         [HttpGet("by_state")]
-        public async Task<IActionResult> GetBreweryByState([FromQuery(Name = "by_state")] string state)
+        public async Task<IActionResult> BreweryByState([FromQuery(Name = "by_state")] string state)
         {
-            var brewery = await _repo.GetBreweryByStateAsync(state);
+            var brewery = await _repo.GetBreweriesByStateAsync(state);
                 if (brewery == null)
                     return NotFound();
                 var response = Ok(brewery);

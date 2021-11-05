@@ -9,6 +9,7 @@ using OpenBreweryASP.Contracts;
 using OpenBreweryASP.Controllers;
 using OpenBreweryASP.Data;
 using OpenBreweryASP.Models.Dtos;
+using OpenBreweryASP.Models.Entities;
 using Xunit;
 
 namespace Unit.Tests
@@ -33,7 +34,7 @@ namespace Unit.Tests
             _mockRepo.Setup(repository => repository.ExistsByCityAsync(invalidCity)).ReturnsAsync(null);
 
             //act
-            var resultOfInvalidCity = await _controller.GetBreweries(invalidCity);
+            var resultOfInvalidCity = await _controller.AllBreweries(invalidCity);
             var ofInvalidCity = (NotFoundResult)resultOfInvalidCity;
 
             //assert
@@ -46,6 +47,25 @@ namespace Unit.Tests
         }
         
         [Theory]
+        [InlineData("Bend")]
+        public async Task GetBreweriesTestValidCity(string validCity)
+        {
+            
+
+            //act
+            var resultOfValidCity = await _controller.AllBreweries(validCity);
+            var ofValidCity = (OkObjectResult)resultOfValidCity;
+
+            //assert
+            Assert.IsAssignableFrom<IActionResult>(resultOfValidCity);
+
+
+      
+       
+        }
+        
+        
+        [Theory]
         [InlineData("")]
         public async Task GetBreweriesTestEmpty(string empty)
         {
@@ -54,12 +74,14 @@ namespace Unit.Tests
             _mockRepo.Setup(repository =>  repository.GetAllAsync()).Returns(Task.FromResult(breweryDtos));
 
             //act
-            var resultOfInvalidCity = await _controller.GetBreweries(empty);
+            var resultOfInvalidCity = await _controller.AllBreweries(empty);
             var validCity = (OkObjectResult)resultOfInvalidCity;
 
             //assert
             Assert.Equal(200, validCity.StatusCode);
         }
+        
+        
 
     [Theory]
     [InlineData("Nevada")]
@@ -70,20 +92,20 @@ namespace Unit.Tests
         _mockRepo.Setup(repository => repository.GetAllAsync()).Returns(Task.FromResult(MockData.GetAllBreweries()));
         
         //act
-        var result = await _controller.GetBreweryByState(validStateBrewery.First().State);
+        // var result = await _controller.GetBreweriesByState(validStateBrewery.First().State);
         
-        //assert
-        if (result is OkResult response) Assert.Equal(200, response.StatusCode);
-        Assert.IsAssignableFrom<IActionResult>(result);
-        Assert.NotNull(result);
+        // //assert
+        // if (result is OkResult response) Assert.Equal(200, response.StatusCode);
+        // Assert.IsAssignableFrom<IActionResult>(result);
+        // Assert.NotNull(result);
         
         
   
         
-        // Fluent assertion version
-        result.Should().NotBe(null);
-     
-        
+        // // Fluent assertion version
+        // result.Should().NotBe(null);
+        //
+        //
     }
 
     [Theory]

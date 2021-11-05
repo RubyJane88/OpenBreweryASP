@@ -9,9 +9,9 @@ namespace OpenBreweryASP.Contracts
     public interface IBreweryRepository
     {
         Task<IEnumerable<BreweryDto>> GetAllAsync();
-        Task<BreweryDto> GetBreweryByCityAsync(string city);
+        Task<IEnumerable<BreweryDto>> GetBreweryByCityAsync(string city);
 
-        Task<BreweryDto> GetBreweryByStateAsync(string state);
+        Task <IEnumerable<BreweryDto>> GetBreweriesByStateAsync(string state);
 
         Task<BreweryDto> GetBreweryByTypeAsync(string type);
         Task<BreweryDto> CreateAsync(Brewery brewery);
