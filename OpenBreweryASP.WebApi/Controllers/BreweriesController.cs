@@ -51,10 +51,10 @@ namespace OpenBreweryASP.Controllers
         }
         
         //GET: by_type
-        [HttpGet("/by_type")]
+        [HttpGet("by_type")]
         public async Task<IActionResult> GetBreweryByType([FromQuery(Name = "by_type")] string type)
         {
-            var brewery = await _repo.GetBreweryByTypeAsync(type);
+            var brewery = await _repo.GetBreweriesByTypeAsync(type);
             if (brewery == null) return NotFound();
             var response = Ok(brewery);
             return response;

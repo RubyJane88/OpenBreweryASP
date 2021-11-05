@@ -13,7 +13,7 @@ namespace OpenBreweryASP.Contracts
 
         Task <IEnumerable<BreweryDto>> GetBreweriesByStateAsync(string state);
 
-        Task<BreweryDto> GetBreweryByTypeAsync(string type);
+        Task <IEnumerable<BreweryDto>> GetBreweriesByTypeAsync(string type);
         Task<BreweryDto> CreateAsync(Brewery brewery);
         Task<bool> DeleteAsync(Guid id);
         Task<BreweryDto> UpdateAsync(Brewery brewery);

@@ -90,15 +90,15 @@ namespace OpenBreweryASP.Repositories
             }
         }
 
-        public async Task<BreweryDto> GetBreweryByTypeAsync(string type)
+        public async Task <IEnumerable <BreweryDto>> GetBreweriesByTypeAsync(string type)
         {
             try
             {
                 var exists = await ExistsByTypeAsync(type);
                 if (exists)
                 {
-                    var brewery  = await _context.Breweries.FirstOrDefaultAsync(b => b.BreweryType == type);
-                    var breweryDto = _mapper.Map<BreweryDto>(brewery);
+                    var breweriesByType = await _context.Breweries.Where(b => b.BreweryType == type).ToListAsync();
+                    var breweryDto = _mapper.Map <IEnumerable<BreweryDto>>(breweriesByType);
                     return breweryDto;
                 }
                 else
