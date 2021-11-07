@@ -99,7 +99,7 @@ namespace OpenBreweryASP.Data
         {
             var brewery = new Brewery
             {
-                Id = new Guid("1f081359-c4a0-4ca4-97c6-8b953b90919e"),
+                Id = new Guid("ba30fefd-88ad-4d24-8ff9-c93b16c23632"),
                 Name = "10-56 Brewing Company",
                 BreweryType = "micro",
                 Street = "400 Brown Cir",
@@ -123,7 +123,7 @@ namespace OpenBreweryASP.Data
         {
             var breweryDto = new BreweryDto
             {
-                Id = new Guid("1f081359-c4a0-4ca4-97c6-8b953b90919v"),
+                Id = new Guid("ba30fefd-88ad-4d24-8ff9-c93b16c23632"),
                 Name = "Alpha Brewing Company",
                 BreweryType = "contract",
                 Street = "400 Brown Cir",

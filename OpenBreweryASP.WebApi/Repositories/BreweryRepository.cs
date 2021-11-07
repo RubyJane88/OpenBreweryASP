@@ -22,7 +22,7 @@ namespace OpenBreweryASP.Repositories
             _mapper = mapper;
         }
         
-        public async Task<IEnumerable<BreweryDto>> GetAllAsync()
+        public async Task<IEnumerable<BreweryDto>> GetAllBreweriesAsync()
         {
             try
             {
@@ -74,7 +74,7 @@ namespace OpenBreweryASP.Repositories
                 if (exists)
                 {
                     var breweriesByState = await _context.Breweries.Where(b => b.State == state).ToListAsync();
-                    var result = _mapper.Map <IEnumerable<BreweryDto>>(breweriesByState);
+                    var result = _mapper.Map<IEnumerable<BreweryDto>>(breweriesByState);
                     return result;
 
                 }
@@ -98,7 +98,7 @@ namespace OpenBreweryASP.Repositories
                 if (exists)
                 {
                     var breweriesByType = await _context.Breweries.Where(b => b.BreweryType == type).ToListAsync();
-                    var breweryDto = _mapper.Map <IEnumerable<BreweryDto>>(breweriesByType);
+                    var breweryDto = _mapper.Map<IEnumerable<BreweryDto>>(breweriesByType);
                     return breweryDto;
                 }
                 else
@@ -113,10 +113,11 @@ namespace OpenBreweryASP.Repositories
             }
         }
 
-        public async Task<BreweryDto> CreateAsync(Brewery brewery)
+        public async Task<BreweryDto> CreateBreweryAsync(Brewery brewery)
         {
             try
             {
+                brewery.Id = Guid.NewGuid();
                 _context.Breweries.Add(brewery);
                 
                 await _context.SaveChangesAsync();
@@ -132,7 +133,7 @@ namespace OpenBreweryASP.Repositories
         }
 
         //refactored it to return bool to check if id is not null
-        public async Task<bool> DeleteAsync(Guid id)
+        public async Task<bool> DeleteBreweryAsync(Guid id)
         {
             try
             {
@@ -155,7 +156,7 @@ namespace OpenBreweryASP.Repositories
         }
         
         
-        public async Task<BreweryDto> UpdateAsync(Brewery brewery)
+        public async Task<BreweryDto> UpdateBreweryAsync(Brewery brewery)
         {
             try
             {
@@ -183,5 +184,6 @@ namespace OpenBreweryASP.Repositories
         
 
         public async Task<bool> ExistsByIdAsync(Guid id) => await _context.Breweries.AnyAsync(b => b.Id == id);
+    
     }
 }

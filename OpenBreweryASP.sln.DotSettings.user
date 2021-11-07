@@ -1,4 +1,12 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/Highlighting/HighlightingSourceSnapshotLocation/@EntryValue">/Users/macbook/Library/Caches/JetBrains/Rider2021.2/resharper-host/temp/Rider/vAny/CoverageData/_OpenBreweryASP.775080232/Snapshot/snapshot.utdcvr</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=31c0bb70_002Dba80_002D47b6_002Db69e_002D7ce33725ab8e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GetBreweriesByState #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::D8761436-A8CB-4B08-AC14-8C4320422E40::net5.0::Unit.Tests.BreweriesControllerTest.GetBreweriesByState&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::D8761436-A8CB-4B08-AC14-8C4320422E40::net5.0::Unit.Tests.BreweriesControllerTest.GetBreweryByType&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::D8761436-A8CB-4B08-AC14-8C4320422E40::net5.0::Unit.Tests.BreweriesControllerTest.GetBreweriesByType&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3617a739_002D1028_002D42e4_002Daec0_002Daadc37b4e79c/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GetBreweriesTestValidCity #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;xUnit::D8761436-A8CB-4B08-AC14-8C4320422E40::net5.0::Unit.Tests.BreweriesControllerTest.GetBreweriesTestValidCity&lt;/TestId&gt;
@@ -12,19 +20,57 @@
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=76334648_002Dc2f0_002D4269_002D8dd3_002Dd5dd52beda68/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from BreweriesControllerTest.cs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;ProjectFile&gt;D8761436-A8CB-4B08-AC14-8C4320422E40/f:BreweriesControllerTest.cs&lt;/ProjectFile&gt;
 &lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8cab1c71_002Dc685_002D4160_002D9e9f_002Deee25da08a7e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GetBreweriesTestValidCity #6" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::D8761436-A8CB-4B08-AC14-8C4320422E40::net5.0::Unit.Tests.BreweriesControllerTest.GetBreweriesTestValidCity&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9c4707f8_002Dfacb_002D42c4_002D89eb_002Dbefe73111a23/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GetBreweriesTestValidCity #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;xUnit::D8761436-A8CB-4B08-AC14-8C4320422E40::net5.0::Unit.Tests.BreweriesControllerTest.GetBreweriesTestValidCity&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d98222f4_002D6981_002D457d_002D9962_002D20b78b73b7b6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="GetBreweriesTestValidCity #5" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a0bc3942_002D2b89_002D494a_002D9e60_002D083f0ded8431/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GetBreweriesByState #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::D8761436-A8CB-4B08-AC14-8C4320422E40::net5.0::Unit.Tests.BreweriesControllerTest.GetBreweriesByState&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a65d3ccc_002D99cf_002D47bf_002Db2ba_002D09427f10c202/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GetBreweriesByState #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::D8761436-A8CB-4B08-AC14-8C4320422E40::net5.0::Unit.Tests.BreweriesControllerTest.GetBreweriesByState&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::D8761436-A8CB-4B08-AC14-8C4320422E40::net5.0::Unit.Tests.BreweriesControllerTest.GetBreweryByType&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::D8761436-A8CB-4B08-AC14-8C4320422E40::net5.0::Unit.Tests.BreweriesControllerTest.PostBreweryTest&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a85b132b_002Df545_002D4391_002D9952_002Ddcfd8b63d8f3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="PostBreweryTest #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::D8761436-A8CB-4B08-AC14-8C4320422E40::net5.0::Unit.Tests.BreweriesControllerTest.PostBreweryTest&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=b3040164_002D02e4_002D473c_002Da7b2_002Db1aaeabe002a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="PostBreweryTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::D8761436-A8CB-4B08-AC14-8C4320422E40::net5.0::Unit.Tests.BreweriesControllerTest.PostBreweryTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::D8761436-A8CB-4B08-AC14-8C4320422E40::net5.0::Unit.Tests.BreweriesControllerTest.PutBreweryTest&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d70ce890_002Dbad0_002D4cda_002D88f9_002D51a7800ba5a5/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GetBreweriesByState" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::D8761436-A8CB-4B08-AC14-8C4320422E40::net5.0::Unit.Tests.BreweriesControllerTest.GetBreweriesByState&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::D8761436-A8CB-4B08-AC14-8C4320422E40::net5.0::Unit.Tests.BreweriesControllerTest.GetBreweriesTestValidCity&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d98222f4_002D6981_002D457d_002D9962_002D20b78b73b7b6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GetBreweriesTestValidCity #5" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;xUnit::D8761436-A8CB-4B08-AC14-8C4320422E40::net5.0::Unit.Tests.BreweriesControllerTest.GetBreweriesTestValidCity&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::D8761436-A8CB-4B08-AC14-8C4320422E40::net5.0::Unit.Tests.BreweriesControllerTest.GetBreweriesTestInvalidCity&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e26716da_002Dc44e_002D4051_002Dafbf_002D1089492da020/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GetBreweriesTestValidCity #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;xUnit::D8761436-A8CB-4B08-AC14-8C4320422E40::net5.0::Unit.Tests.BreweriesControllerTest.GetBreweriesTestValidCity&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::D8761436-A8CB-4B08-AC14-8C4320422E40::net5.0::Unit.Tests.BreweriesControllerTest.GetBreweriesTestInvalidCity&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::D8761436-A8CB-4B08-AC14-8C4320422E40::net5.0::Unit.Tests.BreweriesControllerTest.GetBreweriesTestEmpty&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::D8761436-A8CB-4B08-AC14-8C4320422E40::net5.0::Unit.Tests.BreweriesControllerTest.GetBreweriesByState&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=fa888069_002Da95c_002D4995_002D94cd_002Dd01648c59ad4/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GetBreweryByType" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;

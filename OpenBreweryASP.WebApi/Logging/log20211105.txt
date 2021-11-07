@@ -157,3 +157,14 @@ WHERE [b].[BreweryType] = @__type_0"
 11/05/2021 13:37:22 +01:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 157.3280ms
 11/05/2021 13:37:22 +01:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
 11/05/2021 13:37:22 +01:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 214.8576ms
+11/05/2021 13:45:38 +01:00 Application Starting
+11/05/2021 13:45:39 +01:00 Now listening on: "https://localhost:5001"
+11/05/2021 13:45:39 +01:00 Now listening on: "http://localhost:5000"
+11/05/2021 13:45:39 +01:00 Application started. Press Ctrl+C to shut down.
+11/05/2021 13:45:39 +01:00 Hosting environment: "Development"
+11/05/2021 13:45:39 +01:00 Content root path: "/Users/macbook/Desktop/ASP .Net Core/OpenBreweryASP/OpenBreweryASP.WebApi"
+11/05/2021 13:45:40 +01:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html - -
+11/05/2021 13:45:40 +01:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 383.2524ms
+11/05/2021 13:45:42 +01:00 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - -
+11/05/2021 13:45:42 +01:00 Request finished HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 256.8639ms
+11/05/2021 13:46:18 +01:00 Application is shutting down...
